@@ -24,9 +24,13 @@ I design photonic-crystal nanobeam cavities for erbium-based devices at telecom 
 
 Photons emitted inside a photonic-crystal waveguide need a way to reach the grating coupler, where we can collect them for measurement. Along the way, the light has to pass into a nanobeam waveguide. The two waveguides carry light in different spatial patterns, so the connection needs to account for that difference to avoid losing photons.
 
-I start by choosing an index-guided band in the W1 photonic-crystal waveguide that covers our target wavelengths. Using MIT Photonic Bands, I calculate the light's field pattern—the Bloch mode—at several points along that part of the band. I then normalize those profiles and use them as targets for optimization in Tidy3D.
+I start by choosing an index-guided band in the W1 photonic-crystal waveguide that covers our target wavelengths. Using MIT Photonic Bands, I calculate the light's field pattern—the Bloch mode—at several points along that part of the band. I then normalize each profile and use it as a target in Tidy3D to optimize a separate coupler for that k point and its corresponding wavelength.
 
-This lets me design the converter around the specific mode we want at each frequency. The goal is to efficiently connect the photonic-crystal and nanobeam waveguides across the wavelengths we care about, helping light from embedded quantum emitters reach the grating coupler for collection.
+Each design is tailored to the mode at its chosen wavelength. The goal is to help photons from quantum emitters move between the photonic-crystal and nanobeam waveguides, then reach the grating coupler for collection.
+
+![Simulated magnetic fields for five separately optimized couplers at wavelengths from 929.43 to 965.99 nm; real Hz on the left and magnetic-field magnitude on the right.](/assets/img/mode-converters-by-wavelength.png)
+
+*Each row shows a separate coupler optimized for one k/wavelength point. The left column shows the real part of Hz, and the right shows the magnetic-field magnitude. These are individual designs, rather than a wavelength sweep of one broadband coupler.*
 
 ### Checking how closely fabricated devices match the design
 
