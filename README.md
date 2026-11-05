@@ -18,7 +18,25 @@ I designed GaAs grating couplers that reached **40% coupling efficiency in simul
 
 Getting an emitter to interact strongly with light is easier when the light stays close by. A nanobeam cavity confines light to a small region, giving an embedded emitter more opportunity to interact with it. The aim is to help direct emission into a useful optical mode, so more of those photons can eventually be collected.
 
-I design photonic-crystal nanobeam cavities for erbium-based devices at telecom wavelengths. In simulation, the designs reached **quality factors of one million to ten million**, a measure of how long the cavity can hold light, while keeping it confined to a very small space. I build fabrication limits into the optimization and work with nanofabrication researchers to keep the designs practical.
+I design photonic-crystal nanobeam cavities for erbium-based devices at telecom wavelengths. One simulated result at **1545 nm reached a quality factor of about 8.1 million**, while confining light to a mode volume of **0.428 (λ/n)³**. Together, these describe a cavity that holds light for a long time in a small space—useful for strengthening its interaction with an emitter. I build fabrication limits into the optimization and work with nanofabrication researchers to keep the designs practical.
+
+![Optimized nanobeam mirror taper showing the hole shapes and spacing across 20 labeled cells.](/assets/img/nanobeam-mirror-taper.png)
+
+*The optimized mirror taper: the hole shapes and spacing vary along the beam to shape how light is confined.*
+
+![Simulated magnitude of the Ey electric-field component along a nanobeam cavity, labeled N=15, baseline.](/assets/img/nanobeam-field-profile.png)
+
+*The simulated electric-field profile shows light concentrated around the center of the cavity. The supplied plot is labeled “N=15, baseline” and shows |Ey|.*
+
+Simulation results at **1545 nm**:
+
+| Quantity | Value |
+| --- | --- |
+| Quality factor, Q | 8.105070 × 10⁶ |
+| Mode volume, V | 0.427733 (λ/n)³ |
+| Q/V | 1.894890 × 10⁷ (n/λ)³ |
+
+*Here, λ is the wavelength and n is the refractive index used to normalize the mode volume.*
 
 ### Mode converters: helping photons reach the output
 
