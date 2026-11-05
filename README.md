@@ -54,7 +54,21 @@ I optimize one coupler using these multiple wavelength-specific targets, so the 
 
 A good simulation is only part of the story. Once a device is fabricated, we need to know how closely its shape matches the original layout. Small differences can affect how light behaves, especially in structures with very fine features.
 
-I developed a Python workflow that aligns scanning electron microscope images with the design files and compares their shapes automatically. The analysis found **97.5% agreement across full images and 93.3% in selected regions**, using an overlap-based metric. This gives the fabrication team a repeatable way to measure how well the pattern transfers from a design to a real device. I am the second author on the resulting manuscript.
+I developed a Python workflow that processes scanning electron microscope images, aligns them with the design files, and compares the shapes. Our pattern-transfer fidelity (PTF) score checks both where material should remain and where it should have been removed. The comparison also highlights extra or missing material, giving the fabrication team a practical way to see where a process needs adjustment.
+
+In our paper, all three device types achieved **more than 90% PTF** in a single fabrication run, without device-specific process optimization. These scores measure how closely the fabricated geometry matches the design; they are not measurements of optical efficiency.
+
+![Pattern-transfer fidelity maps for a polarization demultiplexer, grating coupler, and topology-optimized coupler, with extra material in red and missing material in blue.](/assets/img/ptf-figure-5.png)
+
+*White and black show correctly matched material and air; red marks extra material, blue marks missing material, and gray marks excluded areas. Figure 5 from L. H. Mai, R. S. Sarode, et al., [“Versatile Sleeve-and-Bulk Fabrication of Inversely Designed Nanophotonic Structures with High Pattern Transfer Fidelity”](https://arxiv.org/abs/2609.13460v1) (2026), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Extracted from the PDF; the surrounding page text and original caption are omitted.*
+
+| Device | Pattern-transfer fidelity |
+| --- | --- |
+| Shape-optimized polarization demultiplexer | 91.93 ± 0.60% |
+| Shape-optimized grating coupler | 90.07 ± 0.60% |
+| Topology-optimized coupler | 97.13 ± 1.09% |
+
+*Each value is the mean ± standard deviation across five devices of that type, measured within selected analysis regions (Figure 5 and Sections IV–V of the paper). I am the second author on this work.*
 
 ### Understanding the emitters we design around
 
@@ -96,7 +110,7 @@ Before moving into quantum research, I worked on production banking systems. I c
 
 ## Research writing
 
-L. H. Mai, R. S. Sarode, et al., “Versatile Sleeve-and-Bulk Fabrication of Inversely Designed Nanophotonic Structures with High Pattern Transfer Fidelity.” Submitted to *IEEE Journal of Selected Topics in Quantum Electronics*, June 2026. Preprint: arXiv:2609.13460.
+L. H. Mai, R. S. Sarode, et al., [“Versatile Sleeve-and-Bulk Fabrication of Inversely Designed Nanophotonic Structures with High Pattern Transfer Fidelity.”](https://arxiv.org/abs/2609.13460v1) arXiv:2609.13460v1, September 2026.
 
 ## Talks, posters, and learning
 
