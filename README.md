@@ -20,11 +20,13 @@ Getting an emitter to interact strongly with light is easier when the light stay
 
 I design photonic-crystal nanobeam cavities for erbium-based devices at telecom wavelengths. In simulation, the designs reached **quality factors of one million to ten million**, a measure of how long the cavity can hold light, while keeping it confined to a very small space. I build fabrication limits into the optimization and work with nanofabrication researchers to keep the designs practical.
 
-### Mode converters: connecting two kinds of waveguide
+### Mode converters: helping photons reach the output
 
-Different parts of a photonic chip can guide light in different ways. A photonic-crystal waveguide and a nanobeam waveguide have different optical mode shapes—the way light is distributed across the structure. Connecting them directly can cause some light to reflect or escape instead of reaching the next device.
+Photons emitted inside a photonic-crystal waveguide need a way to reach the grating coupler, where we can collect them for measurement. Along the way, the light has to pass into a nanobeam waveguide. The two waveguides carry light in different spatial patterns, so the connection needs to account for that difference to avoid losing photons.
 
-This project focuses on a mode converter between the two waveguides. The goal is to reshape the light as it moves from one to the other, reducing loss at the connection. It is a useful link between devices that each do their own job well but need an efficient way to pass photons along.
+I start by choosing an index-guided band in the W1 photonic-crystal waveguide that covers our target wavelengths. Using MIT Photonic Bands, I calculate the light's field pattern—the Bloch mode—at several points along that part of the band. I then normalize those profiles and use them as targets for optimization in Tidy3D.
+
+This lets me design the converter around the specific mode we want at each frequency. The goal is to efficiently connect the photonic-crystal and nanobeam waveguides across the wavelengths we care about, helping light from embedded quantum emitters reach the grating coupler for collection.
 
 ### Checking how closely fabricated devices match the design
 
