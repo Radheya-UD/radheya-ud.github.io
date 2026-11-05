@@ -24,13 +24,13 @@ I design photonic-crystal nanobeam cavities for erbium-based devices at telecom 
 
 Photons emitted inside a photonic-crystal waveguide need a way to reach the grating coupler, where we can collect them for measurement. Along the way, the light has to pass into a nanobeam waveguide. The two waveguides carry light in different spatial patterns, so the connection needs to account for that difference to avoid losing photons.
 
-I start by choosing an index-guided band in the W1 photonic-crystal waveguide that covers our target wavelengths. Using MIT Photonic Bands, I calculate the light's field pattern—the Bloch mode—at several points along that part of the band. I then normalize each profile and use it as a target in Tidy3D to optimize a separate coupler for that k point and its corresponding wavelength.
+I start by choosing an index-guided band in the W1 photonic-crystal waveguide that covers our target wavelengths. Using MIT Photonic Bands, I calculate the light's field pattern—the Bloch mode—at several k points along that band. I then normalize the profiles and bring them into Tidy3D, where each wavelength is paired with its corresponding target field.
 
-Each design is tailored to the mode at its chosen wavelength. The goal is to help photons from quantum emitters move between the photonic-crystal and nanobeam waveguides, then reach the grating coupler for collection.
+I optimize one coupler using these multiple wavelength-specific targets, so the same structure couples light into the intended mode at each selected wavelength. The goal is to help photons from quantum emitters move between the photonic-crystal and nanobeam waveguides, then reach the grating coupler for collection.
 
-![Simulated magnetic fields for five separately optimized couplers at wavelengths from 929.43 to 965.99 nm; real Hz on the left and magnetic-field magnitude on the right.](/assets/img/mode-converters-by-wavelength.png)
+![Simulated magnetic fields for the same coupler tested at five wavelengths from 929.43 to 965.99 nm; real Hz on the left and magnetic-field magnitude on the right.](/assets/img/mode-converters-by-wavelength.png)
 
-*Each row shows a separate coupler optimized for one k/wavelength point. The left column shows the real part of Hz, and the right shows the magnetic-field magnitude. These are individual designs, rather than a wavelength sweep of one broadband coupler.*
+*One coupler, tested at five wavelengths. Each row shows the simulated field for the same optimized structure, targeting the corresponding Bloch-mode profile calculated in MIT Photonic Bands. The left column shows the real part of Hz; the right shows the magnetic-field magnitude.*
 
 ### Checking how closely fabricated devices match the design
 
