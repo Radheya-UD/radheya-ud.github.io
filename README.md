@@ -26,7 +26,7 @@ I design photonic-crystal nanobeam cavities for erbium-based devices at telecom 
 
 ![Simulated magnitude of the Ey electric-field component along a nanobeam cavity, labeled N=15, baseline.](/assets/img/nanobeam-field-profile.png)
 
-*The simulated electric-field profile shows light concentrated around the center of the cavity. The supplied plot is labeled “N=15, baseline” and shows |Ey|.*
+*The simulated electric-field profile shows light concentrated around the center of the cavity. The supplied plot is labeled “N=15, baseline” and shows the magnitude of the Ey component.*
 
 Simulation results at **1545 nm**:
 
